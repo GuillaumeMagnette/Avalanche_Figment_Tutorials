@@ -28,7 +28,7 @@ async function main() {
     // We can also get the primary asset ID with chain.getAVAXAssetID() call
     const assetInfo = await chain.getAssetDescription(asset)
     const assetID = binTools.cb58Encode(assetInfo.assetID)
-
+    
     // Fetch our current balance
     let balance = await chain.getBalance(address, assetID)
     console.log("Balance before sending tx:", balance)
